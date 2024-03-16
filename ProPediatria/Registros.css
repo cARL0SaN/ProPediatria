@@ -1,0 +1,282 @@
+* {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-family: 'Segoe UI';
+    margin: 0vh;
+    padding: 0vh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/pediatra.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contain {
+    margin: 0% 0%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 95%;
+}
+
+/*-- --*/
+/*--- Ajustes del contenedor principal ---*/
+/*-- --*/
+
+.container {
+    width: 50em;
+    height: 45em;
+    border-radius: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: rgba(232, 232, 232, 0.952);
+    border: 10px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*--- Ajustes del titulo ---*/
+
+#tit {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#tit h1 {
+    font-size: 2em;
+}
+
+#bar {
+    height: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+hr {
+    width: 85%;
+    height: 1vh;
+    background-color: lightseagreen;
+}
+
+/*--- Ajustes del logo ---*/
+
+#logo {
+    width: 25%;
+    height: 100%;
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+}
+
+/*-- --*/
+/*--- Ajustes de los campos ---*/
+/*-- --*/
+
+#campos {
+    width: 80%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+input {
+    width: 90%;
+    height: 3em;
+    border-radius: 5px;
+    background-color: rgb(235, 235, 235);
+    font-weight: 600;
+    border-top-left-radius: 1px solid;
+    border-color: gainsboro;
+}
+
+select {
+    border-radius: 5px;
+    background-color: rgb(235, 235, 235);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border: 2px inset;
+}
+
+select option {
+    font-weight: 600;
+}
+
+/*--- Ajustes del aside de la foto ---*/
+
+.foto {
+    width: 20em;
+    position: relative;
+    min-height: 23.5em;
+    max-height: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#confoto {
+    width: 100em;
+    height: 21em;
+    box-shadow: -2px -2px 2px 0 rgba(0, 0, 0, 0.5);
+    padding-bottom: 10px;
+}
+
+#cofoto{
+    width: 100%;
+    height: 100%;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+}
+
+#photo{
+    border-style: solid;
+    height: 3em;
+    width: 24em;
+    opacity: 0;
+    border:1px black solid;
+}
+
+.foto input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.traer_file{
+    width: 20em;
+    height: 2.5em;
+    background-color: lightseagreen;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+/*-- Ajustes de los datos--*/
+
+.datos {
+    width: 15em;
+    min-height: 23em;
+    max-height: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+#sexo {
+    width: 90%;
+    height: 4em;
+}
+
+#pad {
+    width: 90%;
+    height: 3em;
+    border: 2px inset;
+}
+
+#datos2 {
+    width: 90%;
+    height: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+#contra {
+    width: 70%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+#contra #cor {
+    width: 30%;
+    height: 80%;
+}
+
+#contra #tele {
+    width: 30%;
+    height: 80%;
+}
+
+#cont {
+    width: 45%;
+    height: 80%;
+}
+
+#botones {
+    width: 40em;
+    height: 4em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.botones{
+    border-style: solid;
+}
+
+a {
+    width: 8em;
+    height: 2em;
+    
+}
+
+#boton {
+    width: 100%;
+    height: 100%;
+    transition-duration: 1s;
+    background-color: rgb(12, 175, 175);
+    color: rgb(241, 241, 241);
+    border-style: outset;
+    border-radius: 10px;
+}
+
+
+#boton:hover {
+    transition-duration: 1s;
+    cursor: pointer;
+    background-color: rgb(1, 138, 138);
+    color: white;
+}
+
+@media screen and (max-width: 900px) {
+    .container{
+        width: 30em;
+    }
+
+    .foto {
+        display: none;
+    }
+}

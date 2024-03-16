@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Usuario</title>
+    <link rel="stylesheet" href="CSS_Pediatra.css">
+</head>
+<body>
+    <main class="contain">
+        <header>
+            <div id="logo"><img src="img/Logo.png" alt=""></div>
+            <h1>###</h1>
+            <div id="imgped"><img src="img/perfil.png" alt="" id="imagen" onclick="cargarArchivo()">
+                <input type="file" id="fileInput" style="display:none;" onchange="archivoCargado(event)">
+                <a href="Index.html">Cerrar sesion</a>
+            </div>
+            
+        </header>
+        
+        <hr color="purple">
+
+        <div class="navigation">
+            <a href="Reg_Niño.html"><button id="register">Registrar bebé</button></a>
+            <a href="#"><button id="search" class="active" onclick="mostrar()">Buscar bebé</button></a>
+        </div>
+        
+        <div id="container">
+            <div class="search-container" id="container-search">
+                <div class="search-box">
+                    <h2>Buscar</h2>
+                    <form id="search-form">
+                        <label for="identifier">Identificador</label>
+                        <input type="text" id="identifier" name="identifier" placeholder="Ingrese el identificador">
+                        <button type="submit" class="search-btn">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function mostrar(){
+            if (document.getElementById('container-search').style.display === 'flex' || document.getElementById('container-search').style.display === 'initial' ) {
+                document.getElementById('search').style.backgroundColor = 'rgba(232, 232, 232, 0)';
+                document.getElementById('search').style.backgroundColo = 'rgb(218, 213, 213)';
+                document.getElementById('container-search').style.display = 'none';
+            } else {
+                document.getElementById('search').style.backgroundColor = 'lightseagreen';
+                document.getElementById('container-search').style.display = 'flex';
+
+            }
+            
+            
+        }
+    </script>
+
+    <script>
+        function cargarArchivo() {
+            document.getElementById('fileInput').click();
+        }
+
+        function archivoCargado(event) {
+            var archivo = event.target.files[0];
+            // Mostrar la imagen seleccionada
+            var imagen = document.getElementById('imagen');
+            imagen.src = URL.createObjectURL(archivo);
+        }
+    </script>
+</body>
+</html>

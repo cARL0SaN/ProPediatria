@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Niño</title>
+    <link rel="stylesheet" href="Ventana_kid.css">
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1>Datos del niño</h1>
+        </header>
+        <form class="child-data-form">
+            <div class="form-row">
+                <label for="identification">Identificación</label>
+                <input type="text" id="identification" name="identification">
+
+                <label for="sex">Sexo</label>
+                <input type="text" id="sex" name="sex">
+            </div>
+
+            <div class="form-row">
+                <label for="names">Nombre(s)</label>
+                <input type="text" id="names" name="names">
+
+                <label for="surnames">Apellidos</label>
+                <input type="text" id="surnames" name="surnames">
+            </div>
+
+            <div class="form-row">
+                <label for="birth-date">Fecha de nacimiento</label>
+                <input type="date" id="birth-date" name="birth-date">
+
+                <label for="emergency-phone">Teléfono del acudiente</label>
+                <input type="text" id="emergency-phone" name="emergency-phone">
+            </div>
+
+            <div class="form-row">
+                <label for="neighborhood">Barrio</label>
+                <input type="text" id="neighborhood" name="neighborhood">
+
+                <label for="address">Dirección</label>
+                <input type="text" id="address" name="address">
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="update-button">Actualizar datos</button>
+                <button type="submit" class="save-button">Guardar cambios</button>
+            </div>
+        </form>
+
+        <section class="visit-history">
+            <h2>Historial de visitas realizadas</h2>
+                <button type="button" id="boton" onclick="abrirPagina('Agre_Visita.html')">Agregar Visita</button>
+            <div class="visits">
+                <div class="visit">
+                    <label>Fecha:</label>
+                    <input type="date" id="fecha">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function abrirPagina(url) {
+            window.open(url, '_blank', 'width=600,height=400,top=150,left=200,modal=yes,alwaysRaised=yes');
+        }
+    </script>
+</body>
+
+</html>

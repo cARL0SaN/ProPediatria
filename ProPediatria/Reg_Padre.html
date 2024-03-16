@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPediatria - Registro de Padre</title>
+    <link rel="stylesheet" href="Registros.css">
+</head>
+
+<body background="img/pediatra.jpg">
+    <div class="contain">
+        <section class="container">
+            <article id="tit">
+                <img src="img/Logo.png" alt="" id="logo">
+                <h1>REGISTRO DE PADRES</h1>
+
+            </article>
+
+            <div id="bar">
+                <hr>
+            </div>
+
+            <form id="campos">
+                <aside class="foto">
+                    <div id="confoto">
+                        <img src="img/pediatria_Padres.png" alt="">
+                    </div>
+                </aside>
+                <section class="datos">
+                    <select name="padres" id="pad">
+                        <option value="">Tipo de padre</option>
+                        <option value="">Padre</option>
+                        <option value="">Madre</option>
+                    </select>
+                    <input type="text" name="ident" id="ide" placeholder="Número de Identificaión">
+                    <input type="text" name="nombre" id="nom" placeholder="Nombre(s)">
+                    <input type="text" name="apellido" id="ape" placeholder="Apellidos">
+                    <input type="text" name="profesion" id="prof" placeholder="Profesión">
+                    <section id="datos2">
+                        <select name="grup. sang" id="gs">
+                            <option value="">Grupo Sanguineo</option>
+                            <option value="">A</option>
+                            <option value="">B</option>
+                            <option value="">AB</option>
+                            <option value="">O</option>
+                        </select>
+                        <select name="RH" id="rh">
+                            <option value="">RH</option>
+                            <option value="">+</option>
+                            <option value="">-</option>
+                        </select>
+                    </section>
+                </section>
+            </form>
+            <div id="contra">
+                <input type="email" name="correo" id="cor" placeholder="Correo">
+                <input type="tel" name="telefono" id="tele" placeholder="Teléfono" maxlength="14">
+            </div>
+            <form id="botones">
+
+                <a href="Index.html">
+                    <input type="button" value="Salir" id="boton">
+                </a>
+                <a href="#">
+                    <input type="submit" value="Registrarse" id="boton">
+                </a>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>

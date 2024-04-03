@@ -1,0 +1,751 @@
+*{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    margin: 0vh;
+    padding: 0vh;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url("img/ped_fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container{
+    margin: 5% 0%;
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(232, 232, 232, 0.952);
+    border: 10px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*-- --*/
+/*--- Ajustes del menu de navegación ---*/
+/*-- --*/
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 5.5em;
+    max-height: none;
+}
+
+#barra {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 100%;
+    height: 3em;
+
+}
+
+hr {
+    margin: 0%;
+    width: 85%;
+    height: 1em;
+    border-style: none;
+}
+
+/*--- Establecimiento del tamaño del menu ---*/
+
+nav {
+    height: 100%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#nave img {
+    width: 2.5em;
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    width: 100%;
+    height: 100%;
+}
+
+/*--- Ajustes del logo ---*/
+
+#log {
+    width: 10em;
+    min-height: 7em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/*--- Ajustes del menu ---*/
+
+#ico {
+    min-width: 45%;
+    max-height: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#ico li {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+}
+
+#ico li a {
+    width: 92%;
+    height: 15%;
+    font-size: 1em;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*--- ## ---*/
+
+#ico li a:hover {
+    font-size: 1.2em;
+    color: rgb(143, 143, 143);
+}
+
+#ico2 {
+    display: none;
+}
+
+/*-- --*/
+/*--- Ajustes de las secciones ---*/
+/*-- --*/
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*--- Seccion 1 (sect1) ---*/
+
+.contain{
+    width: 100%;
+    min-height: 28em;
+    max-height: none;
+}
+
+/*--- Ajustes del article (informacion) ---*/
+
+#tit1{
+    width: 70%;
+    max-height: none;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+#tit1 h1{
+    font-size: 2em;
+    text-align: center;
+}
+
+#art1{
+    width: 70%;
+    max-height: none;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#art1 p{
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/*--- ajustes de los campos ---*/
+
+.datos{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#traer{
+    width: 100%;
+    min-height: 10rem;
+    max-height: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#edades{
+    width: 33%;
+    min-height: 8em;
+    max-height: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#sexos{
+    width: 33%;
+    min-height: 8em;
+    max-height: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#infografica{
+    width: 33%;
+    min-height: 8em;
+    max-height: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+label{
+    width: 20em;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: auto;
+}
+
+select{
+    width: 15em;
+    height: 3em;
+    font-weight: 600;
+    background-color: rgb(251, 251, 251);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+select:hover{
+    background-color: rgb(246, 246, 246);
+}
+
+select option{
+    font-weight: 600;
+    background-color: rgb(246, 246, 246);
+}
+
+#butn{
+    width: 50%;
+    height: 2.5em;
+}
+
+#buscar{
+    width: 9em;
+    height: 3em;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(249, 249, 249);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#buscar:hover{
+    background-color: rgb(246, 246, 246);
+
+}
+
+/*--- Ajustes de las graficas ---*/
+
+.graficas{
+    width: 100%;
+    max-height: none;
+    display: none;
+}
+
+.graf{
+    margin:  0 0 5% 0;
+    width: 80%;
+    max-height: none;
+    display: flex;
+    justify-content: space-evenly;
+    display: none;
+}
+
+.graf img{
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-radius: 8%;
+    border-color: lightseagreen;
+}
+
+#grafi{
+    width: 73%;
+    height: 95%;
+    margin:  0 2% 0 0;
+}
+
+#info{
+    width: 25%;
+    height: 90%;
+}
+
+#info p{
+    text-align: justify;
+}
+
+#todo{
+    width: 50%;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button{
+    width: 10em;
+    height: 55%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(250, 250, 250);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(246, 246, 246);
+
+}
+
+
+#btodo2{
+    display: none;
+}
+
+footer{
+    width: 100%;
+    height: 150px;
+}
+
+@media screen and (max-width: 1080px) {
+    #barra {
+        display: flex;
+        align-items: center;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    #ico {
+        display: none;
+    }
+
+    #nave img {
+        border: none;
+        cursor: pointer;
+        display: initial;
+    }
+
+    #ico2 {
+        width: 85%;
+        min-height: 2em;
+        max-height: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        list-style-type: none;
+        display: none;
+    }
+
+    #ico2 li {
+        min-width: 4em;
+        min-height: 1.5em;
+    }
+
+    #ico2 li a:hover {
+        font-size: 1.2em;
+        color: rgb(143, 143, 143);
+    }
+
+    /*--- ---*/
+
+    #tit1{
+        width: 80%;
+        max-height: none;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+    
+    #tit1 h1{
+        font-size: 1.75em;
+        text-align: center;
+    }
+    
+    #art1{
+        width: 80%;
+        max-height: none;
+        font-size: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    #art1 p{
+        font-size: 0.90rem;
+        text-align: justify;
+    }
+    
+    /*--- ---*/
+
+    #traer{
+        width: 80%;
+        min-height: 10rem;
+        max-height: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    #edades{
+        width: 33%;
+        min-height: 8em;
+        max-height: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    #sexos{
+        width: 33%;
+        min-height: 8em;
+        max-height: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    #infografica{
+        width: 33%;
+        min-height: 8em;
+        max-height: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    label{
+        width: 15em;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-evenly;
+        cursor: auto;
+    }
+    
+    select{
+        width: 10em;
+        height: 3em;
+        font-weight: 600;
+        background-color: rgb(251, 251, 251);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    /*--- ---*/
+
+    .graficas{
+        width: 100%;
+        max-height: none;
+        display: none;
+    }
+    
+    .graf{
+        margin:  0 0 5% 0;
+        width: 80%;
+        max-height: none;
+        display: flex;
+        justify-content: space-evenly;
+        display: none;
+    }
+    
+    .graf img{
+        width: 100%;
+        height: 100%;
+        border-style: solid;
+        border-radius: 8%;
+        border-color: lightseagreen;
+    }
+    
+    #grafi{
+        width: 100%;
+        height: 95%;
+        margin:  0 0 0 0;
+    }
+    
+    #info{
+        width: 100%;
+    }
+
+    #info p{
+        font-size: 0.90rem;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        width: 85%;
+    }
+
+    #barra {
+        display: flex;
+        align-items: center;
+    }
+
+    hr{
+        height: 0.75em;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    #ico {
+        display: none;
+    }
+
+    header{
+        position: relative;
+        height: 2em;
+    }
+
+    #nave img {
+        border: none;
+        cursor: pointer;
+        display: initial;
+    }
+
+    #log {
+        width: 7em;
+    }
+
+    #ico2 {
+        position: absolute;
+        right: 0;
+        top: 4.5em;
+        width: 6em;
+        min-height: 2em;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        list-style-type: none;
+        display: none;
+        background-color: rgba(232, 232, 232);
+        border: 1px solid;
+    }
+
+    #ico2 li {
+        min-width: 100%;
+        min-height: 1.5em;
+    }
+
+    #ico2 li:hover{
+        background-color:  rgb(224, 224, 224);
+    }
+
+    #ico2 a{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    #ico2 li a:hover {
+        font-size: 1em;
+        color: rgb(143, 143, 143);
+    }
+
+    /*--- ---*/
+    
+    #tit1{
+        width: 80%;
+        max-height: none;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+    
+    #tit1 h1{
+        font-size: 1.25em;
+        text-align: center;
+    }
+    
+    #art1{
+        width: 80%;
+        max-height: none;
+        font-size: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    #art1 p{
+        font-size: 0.90rem;
+        text-align: justify;
+    }
+    
+    /*--- ---*/
+
+    #traer{
+        width: 10em;
+        min-height: 10rem;
+        max-height: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .datos{
+        flex-wrap: wrap;
+    }
+    
+    #edades{
+        width: 10em;
+        min-height: 6em;
+        max-height: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    #sexos{
+        width: 10em;
+        min-height: 6em;
+        max-height: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    #infografica{
+        width: 10em;
+        min-height: 6em;
+        max-height: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    label{
+        width: 15em;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-evenly;
+        cursor: auto;
+    }
+    
+    select{
+        width: 10em;
+        height: 2.5em;
+        font-weight: 600;
+        background-color: rgb(251, 251, 251);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    /*--- ---*/
+    .graf{
+        margin:  0 0 5% 0;
+        width: 100%;
+        max-height: none;
+        display: flex;
+        justify-content: space-evenly;
+        display: none;
+    }
+    
+    #info{
+        width: 85%;
+    }
+
+    /*--- ---*/
+
+    #butn{
+        width: 8.4em;
+        height: 4em;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #buscar{
+        height: 60%;
+        width: 100%;
+    }
+
+    #todo{
+        width: 8.4em;
+    }
+    
+    button:hover{
+        background-color: rgb(246, 246, 246);
+    
+    }
+
+}

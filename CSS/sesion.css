@@ -1,0 +1,198 @@
+*{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-family:'Segoe UI';
+    margin: 0vh;
+    padding: 0vh;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url("img/ped_fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contain{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-- --*/
+/*--- Ajustes del contenedor principal ---*/
+/*-- --*/
+
+.container{
+    width: 50em;
+    height: 25em;
+    border-radius: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: rgba(232, 232, 232, 0.952);
+    border: 10px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*--- Ajustes del aside del logo ---*/
+
+#logo {
+    width: 40%;
+    height: 18em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo img{
+    width: 80%;
+    height: 80%;
+    border-style: inset;
+    border-radius: 10%;
+}
+
+/*--- Ajustes de los campos ---*/
+
+#tit{
+    width: 100%;
+    min-height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tit h1{
+    font-size: 1.5em;
+}
+
+#campos{
+    width: 40%;
+    height: 17em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#rol{
+    width: 90%;
+    height: 15%;
+    border-radius: 5px;
+    background-color: rgba(232, 232, 232, 0.952);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+#rol option{
+    font-weight: 600;
+}
+
+label{
+    width: 90%;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: justify;
+    cursor: auto;
+}
+
+input{
+    width: 100%;
+    height: 3em;
+    border-radius: 5px;
+    background-color: rgba(252, 252, 252, 0.952);
+    font-weight: 600;
+    border: none;
+}
+
+#botones {
+    width: 80%;
+    min-height: 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+a{
+    width: 70%;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#boton {
+    width: 7em;
+    height: 2.2em;
+    transition-duration: 1s;
+    background-color: rgb(12, 175, 175);
+    color: rgb(241, 241, 241);
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+#boton:hover{
+    transition-duration: 1s;
+    cursor: pointer;
+    background-color: rgb(1, 138, 138);
+    color: white;   
+}
+
+@media screen and (max-width: 900px) {
+    .container{
+        width: 90%;
+    }
+    
+    label{
+        display: none;
+    }
+
+    a{
+        width: 80%;
+    }
+
+    #boton{
+        width: 80%;
+    }
+
+    #campos{
+        width: 80%;
+    }
+
+    #tit{
+        
+        width: 90%;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #botones {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+/*@media screen and (max-width: 300px) {
+    .container{
+        width: 30em;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #botones {
+        flex-wrap: wrap;
+    }
+}

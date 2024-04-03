@@ -1,0 +1,176 @@
+*{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    font-family: 'Segoe UI';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url('img/pediatra.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contain {
+    margin: 5em 0;
+    width: 50em;
+    max-height: none;
+    background-color: rgba(232, 232, 232, 0.952);
+    border: 10px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#tit{
+    height: 5em;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 80%;
+    max-height: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container2{
+    width: 100%;
+    min-height: 4em;
+    max-height: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#container2 label{
+    width: 100%;
+    height: 1.5em;
+    display: flex;
+    justify-content: left;
+    cursor: auto;
+}
+
+#container2 input[type='number'], #container2 input[type='date']{
+    width: 12em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+#container2 input[type='radio']{
+    width: 3em;
+    height: 1.5em;
+    display: flex;
+}
+
+#inside{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#inside1{
+    width: 33%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#inside2 {
+    width: 100%;
+    min-height: 10em;
+    max-height: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.datos{
+    width: 100%;
+    max-height: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#area{
+    margin-left: 10px;
+    width: 70%;
+    display: none;
+}
+
+#textmedi {
+    width: 100%;
+    max-height: 20em;
+}
+
+#botones {
+    width: 80%;
+    height: 5em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#container2 #boton{
+    margin: 5px 0 5px 0;
+    width: 8em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#grafica{
+    width: 100%;
+    min-height: 30em;
+    border-style: solid;
+    display: none;
+}
+
+a{
+    width: 70%;
+    height: 80%;
+}
+
+#boton {
+    width: 7em;
+    height: 2.2em;
+    transition-duration: 1s;
+    background-color: rgb(12, 175, 175);
+    color: rgb(241, 241, 241);
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+
+#boton:hover{
+    transition-duration: 1s;
+    cursor: pointer;
+    background-color: rgb(1, 138, 138);
+    color: white;   
+}
+
+textarea{
+    text-align: justify;
+}
+

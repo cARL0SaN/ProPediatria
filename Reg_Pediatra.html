@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPediatria - Registro de Pediatras</title>
+    <link rel="icon" href="img/Logomin.png">
+    <link rel="stylesheet" href="CSS/Registros.css">
+</head>
+
+<body background="img/pediatra.jpg">
+    <div class="contain">
+        <section class="container">
+            <article id="tit">
+                <img src="img/Logo.png" alt="" id="logo">
+                <h1>REGISTRO DE PEDIATRAS</h1>
+            </article>
+
+            <div id="bar">
+                <hr>
+            </div>
+
+            <form class="campos" action="PHP & JS/registroPediatra.php" method="post" enctype="multipart/form-data">
+                <aside class="foto">
+                    <div id="confoto"><img src="img/perfil.png" alt="" id="cofoto"></div>
+                    <input type="file" name="foto_pediatra" id="photo" onchange="mostrarImagen(event)">
+                    <label for="photo" class="traer_file">Buscar Foto</label>
+                </aside>
+                <section class="datos">
+                    <input type="text" name="ident" id="ide" placeholder="Número de Identificaión"
+                        oninput="validarNumeros(event)" maxlength="15" required>
+                    <input type="text" name="nombre" id="nom" placeholder="Nombre(s)"
+                        oninput="validarTextoNumeros(event)" required>
+                    <input type="text" name="apellido" id="ape" placeholder="Apellidos" required>
+                    <input type="date" name="fecha_nacimiento" id="fecha_nac" required>
+                    <select name="sexo_usuario" id="sexo" required>
+                        <option value="" disabled selected value="">Sexo</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+                    <input type="text" name="Lugar_trabajo" id="trabajo" placeholder="Lugar de trabajo"
+                        oninput="validarTextoNumeros(event)" required>
+                    <input type="file" name="foto_pediatra2" id="photo2" onchange="mostrarImagen(event)">
+                    <div id="contra">
+                        <input type="password" name="cont" id="cont" placeholder="contraseña" minlength="8" required>
+                    </div>
+                </section>
+                <div id="botones">
+                    <a href="Index.html" method="post">
+                        <input type="button" value="Salir" id="boton">
+                    </a>
+                    <a href="#">
+                        <input type="submit" value="Registrarse" id="boton">
+                    </a>
+                </div>
+            </form>
+        </section>
+    </div> 
+
+    <script>
+        // Obtener la fecha actual
+        const fechaActual = new Date();
+
+        // Restar 14 años a la fecha actual
+        fechaActual.setFullYear(fechaActual.getFullYear() - 18);
+
+        // Formatear la fecha como YYYY-MM-DD (formato requerido por el input date)
+        const fechaMaxima = fechaActual.toISOString().split('T')[0];
+
+        // Establecer la fecha mínima en el input date
+        document.getElementById('fecha_nac').setAttribute('max', fechaMaxima);
+    </script>
+
+    <script>
+        function mostrarImagen(event) {
+            var archivo = event.target.files[0];
+            var lector = new FileReader();
+            lector.onload = function (e) {
+                var imagen = document.getElementById('cofoto');
+                imagen.src = e.target.result;
+            }
+            lector.readAsDataURL(archivo);
+        }
+    </script>
+
+    <script>
+        function validarTexto(event) {
+            const input = event.target;
+            const texto = input.value;
+            const valido = /^[a-zA-Z\s]*$/.test(texto);
+
+            if (!valido) {
+                input.value = texto.slice(0, -1); // Eliminar el último caracter no válido
+                document.getElementById('mensajeError').textContent = 'Solo se permiten letras y espacios.';
+            } else {
+                document.getElementById('mensajeError').textContent = '';
+            }
+        }
+    </script>
+
+    <script>
+        function validarNumeros(event) {
+            const input = event.target;
+            const numeros = /^[0-9]*$/;
+            const valido = numeros.test(input.value);
+
+            if (!valido) {
+                input.value = input.value.replace(/\D/g, ''); // Eliminar caracteres no numéricos
+                document.getElementById('mensajeErrorNumeros').textContent = 'Solo se permiten números.';
+            } else {
+                document.getElementById('mensajeErrorNumeros').textContent = '';
+            }
+        }
+    </script>
+
+    <script>
+        function validarTextoNumeros(event) {
+            const input = event.target;
+            const textoNumeros = /^[a-zA-Z0-9\s]*$/;
+            const valido = textoNumeros.test(input.value);
+
+            if (!valido) {
+                input.value = input.value.replace(/[^a-zA-Z0-9\s]/g, ''); // Eliminar caracteres especiales
+                document.getElementById('mensajeErrorTextoNumeros').textContent = 'Solo se permiten letras y números.';
+            } else {
+                document.getElementById('mensajeErrorTextoNumeros').textContent = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

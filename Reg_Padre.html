@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPediatria - Registro de Padre</title>
+    <link rel="icon" href="img/Logomin.png">
+    <link rel="stylesheet" href="CSS/Registros.css">
+</head>
+
+<body background="img/pediatra.jpg">
+    <div class="contain">
+        <section class="container">
+            <article id="tit">
+                <img src="img/Logo.png" alt="" id="logo">
+                <h1>REGISTRO DE PADRES</h1>
+            </article>
+
+            <div id="bar">
+                <hr>
+            </div>
+
+            <form id="campos">
+                <aside class="foto">
+                    <div id="confoto">
+                        <img src="img/pediatria_Padres.png" alt="">
+                    </div>
+                </aside>
+                <section class="datos">
+                    <select name="padres" id="pad">
+                        <option value="">Tipo de padre</option>
+                        <option value="">Padre</option>
+                        <option value="">Madre</option>
+                    </select>
+                    <input type="text" name="ident" id="ide" placeholder="Número de Identificaión"
+                        oninput="validarNumeros(event)" maxlength="15" required>
+                    <input type="text" name="nombre" id="nom" placeholder="Nombre(s)"
+                        oninput="validarTextoNumeros(event)">
+                    <input type="text" name="apellido" id="ape" placeholder="Apellidos" oninput="validarTexto(event)">
+                    <input type="text" name="profesion" id="prof" placeholder="Profesión" oninput="validarTexto(event)">
+                    <section id="datos2">
+                        <select name="grup. sang" id="gs">
+                            <option value="" disabled selected value="">Grupo Sanguineo</option>
+                            <option value="">A</option>
+                            <option value="">B</option>
+                            <option value="">AB</option>
+                            <option value="">O</option>
+                        </select>
+                        <select name="RH" id="rh">
+                            <option value="" disabled selected value="">RH</option>
+                            <option value="">+</option>
+                            <option value="">-</option>
+                        </select>
+                    </section>
+                    <div id="datos3">
+                        <input type="email" name="correo" id="cor" placeholder="Correo">
+                        <input type="tel" name="telefono" id="tele" placeholder="Teléfono" maxlength="14"
+                            oninput="validarNumeros(event)">
+                    </div>
+                </section>
+            </form>
+            <form id="botones">
+
+                <a onclick="cerrar()">
+                    <input type="button" value="Salir" id="boton">
+                </a>
+                <a href="#">
+                    <input type="submit" value="Registrarse" id="boton">
+                </a>
+            </form>
+        </section>
+    </div>
+    
+    <script>
+        function cerrar() {
+            window.close();
+        }
+    </script>
+
+    <script>
+        function validarTexto(event) {
+            const input = event.target;
+            const texto = input.value;
+            const valido = /^[a-zA-Z\s]*$/.test(texto);
+
+            if (!valido) {
+                input.value = texto.slice(0, -1); // Eliminar el último caracter no válido
+                document.getElementById('mensajeError').textContent = 'Solo se permiten letras y espacios.';
+            } else {
+                document.getElementById('mensajeError').textContent = '';
+            }
+        }
+    </script>
+
+    <script>
+        function validarNumeros(event) {
+            const input = event.target;
+            const numeros = /^[0-9]*$/;
+            const valido = numeros.test(input.value);
+
+            if (!valido) {
+                input.value = input.value.replace(/\D/g, ''); // Eliminar caracteres no numéricos
+                document.getElementById('mensajeErrorNumeros').textContent = 'Solo se permiten números.';
+            } else {
+                document.getElementById('mensajeErrorNumeros').textContent = '';
+            }
+        }
+    </script>
+
+    <script>
+        function validarTextoNumeros(event) {
+            const input = event.target;
+            const textoNumeros = /^[a-zA-Z0-9\s]*$/;
+            const valido = textoNumeros.test(input.value);
+
+            if (!valido) {
+                input.value = input.value.replace(/[^a-zA-Z0-9\s]/g, ''); // Eliminar caracteres especiales
+                document.getElementById('mensajeErrorTextoNumeros').textContent = 'Solo se permiten letras y números.';
+            } else {
+                document.getElementById('mensajeErrorTextoNumeros').textContent = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

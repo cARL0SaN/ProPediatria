@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPediatria - Registro de Acudiente</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="PHP & JS/buscarAcudiente.js"></script>
+    <link rel="icon" href="img/Logomin.png">
+    <link rel="stylesheet" href="CSS/Registros.css">
+</head>
+
+<body background="img/pediatra.jpg">
+    <main class="contain">
+        <section class="container">
+            <article id="tit">
+                <img src="img/Logo.png" alt="" id="logo">
+                <h1>REGISTRO DE ACUDIENTE</h1>
+
+            </article>
+
+            <div id="bar">
+                <hr>
+            </div>
+
+            <form id="campos" action="PHP & JS/registroAcudiente.php" method="post">
+                <aside class="foto">
+                    <div id="confoto">
+                        <img src="img/pediatria_Padres.png" alt="">
+                    </div>
+                </aside>
+                <section class="datos">
+                    <input type="text" name="ident" id="ide" placeholder="Número de Identificaión"
+                        oninput="validarNumeros(event)" maxlength="15">
+                    <input type="text" name="nombre" id="nom" placeholder="Nombre(s)"
+                        oninput="validarTextoNumeros(event)" disabled>
+                    <input type="text" name="apellido" id="ape" placeholder="Apellidos" oninput="validarTexto(event)"
+                        disabled>
+                    <input type="date" id="fec_nac" name="fec_nac" disabled>
+                    <input type="email" name="correo" id="cor" placeholder="Correo">
+                    <input type="tel" name="telefono" id="tele" placeholder="Teléfono" maxlength="14"
+                        oninput="validarNumeros(event)">
+                    <div id="contra">
+                        <input type="password" name="cont" id="cont" placeholder="contraseña">
+                    </div>
+                </section>
+                <div id="botones">
+
+                    <a href="Index.html">
+                        <input type="button" value="Salir" id="boton">
+                    </a>
+                    <a href="#">
+                        <input type="submit" value="Registrarse" id="boton">
+                    </a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById("campos").addEventListener("submit", function() {
+            document.getElementsByName("nombre")[0].disabled = false;
+            document.getElementsByName("apellido")[0].disabled = false;
+            document.getElementsByName("fec_nac")[0].disabled = false;
+        });
+    </script>
+    
+
+    <script>
+        function validarTexto(event) {
+            const input = event.target;
+            const texto = input.value;
+            const valido = /^[a-zA-Z\s]*$/.test(texto);
+
+            if (!valido) {
+                input.value = texto.slice(0, -1); // Eliminar el último caracter no válido
+            } else {
+            }
+        }
+    </script>
+
+    <script>
+        function validarNumeros(event) {
+            const input = event.target;
+            const numeros = /^[0-9]*$/;
+            const valido = numeros.test(input.value);
+
+            if (!valido) {
+                input.value = input.value.replace(/\D/g, ''); // Eliminar caracteres no numéricos
+            } else {
+            }
+        }
+    </script>
+
+    <script>
+        function validarTextoNumeros(event) {
+            const input = event.target;
+            const textoNumeros = /^[a-zA-Z0-9\s]*$/;
+            const valido = textoNumeros.test(input.value);
+
+            if (!valido) {
+                input.value = input.value.replace(/[^a-zA-Z0-9\s]/g, ''); // Eliminar caracteres especiales
+                document.getElementById('mensajeErrorTextoNumeros').textContent = 'Solo se permiten letras y números.';
+            } else {
+                document.getElementById('mensajeErrorTextoNumeros').textContent = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

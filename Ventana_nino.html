@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Niño</title>
+    <link rel="icon" href="img/Logomin.png">
+    <link rel="stylesheet" href="CSS/Ventana_kid.css">
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1>Datos del niño</h1>
+        </header>
+        <form class="child-data-form">
+            <div class="form-row">
+                <label for="identification">Identificación</label>
+                <input type="text" id="identification" name="identification" disabled>
+
+                <label for="sex">Sexo</label>
+                <input type="text" id="sex" name="sex" disabled>
+            </div>
+
+            <div class="form-row">
+                <label for="names">Nombre(s)</label>
+                <input type="text" id="names" name="names" disabled>
+
+                <label for="surnames">Apellidos</label>
+                <input type="text" id="surnames" name="surnames" disabled>
+            </div>
+
+            <div class="form-row">
+                <label for="birth-date">Fecha de nacimiento</label>
+                <input type="date" id="birth-date" name="birth-date" disabled>
+
+                <label for="emergency-phone">Teléfono del acudiente</label>
+                <input type="text" id="emergency-phone" name="emergency-phone" disabled>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="update-button" onclick="abrirPagina('Reg_Padre.html')">Registrar
+                    padres</button>
+                <button type="button" class="update-button" onclick="actualizar()">Actualizar Telefono</button>
+                <button type="submit" class="save-button">Guardar cambios</button>
+            </div>
+        </form>
+
+        <section class="visit-history">
+            <h2>Historial de visitas realizadas</h2>
+            <button type="button" id="boton" onclick="abrirPagina('Agre_Visita.html')">Agregar Visita</button>
+            <div class="visits">
+                <div class="visit">
+                    <label>Fecha:</label>
+                    <input type="date" id="fecha">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function actualizar() {
+            document.getElementsByName("emergency-phone")[0].disabled = false;
+        }
+    </script>
+
+    <script>
+        function abrirPagina(URL) {
+            window.open(URL, 'Ventana_niño', 'width=650,height=762,top=150,left=625,modal=no,alwaysRaised=yes,toolbar=no,menubar=no,location=no');
+        }
+    </script>
+</body>
+
+</html>

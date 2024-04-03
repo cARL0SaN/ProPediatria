@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPediatria - Graficas</title>
+    <link rel="icon" href="img/Logomin.png">
+    <link rel="stylesheet" href="CSS/Ventana2.css">
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <nav>
+                <ul id="log">
+                    <li id="logo"><img src="img/Logo.png" alt="Logo"></li>
+                </ul>
+                <div id="nave"><img src="img/menu.png" alt="menu desplegable" onclick="menu()"></div>
+                <ul id="ico">
+                    <li><a href="Index.html">Inicio</a></li>
+                    <li><a href="#">Pediatras</a></li>
+                    <li><a href="Reg_Acudiente.html">Registro</a></li>
+                    <li><a href="inicio de sesion.html">Iniciar sesion</a></li>
+                </ul>
+            </nav>
+            <ul id="ico2">
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="#">Pediatras</a></li>
+                <li><a href="Reg_Acudiente.html">Registro</a></li>
+                <li><a href="inicio de sesion.html">Iniciar sesion</a></li>
+            </ul>
+        </header>
+
+        <div id="barra">
+            <hr size="6px" color="lightseagreen">
+        </div>
+
+        <section class="contain">
+            <div id="tit1">
+                <h1>GRAFICAS DE CRECIMIENTO INFANTIL</h1>
+            </div>
+            <article id="art1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, mollitia voluptas blanditiis
+                    quam similique, inventore officiis exercitationem asperiores ea ab possimus voluptate placeat modi a
+                    architecto explicabo?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis reiciendis nemo
+                    hic omnis exercitationem, ex, cumque recusandae minima fugit, error aspernatur at! Quo iste
+                    laboriosam vitae cupiditate explicabo rem? Veniam Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Non repudiandae voluptates ad eligendi aut, earum, tempore vel maxime dolore nostrum quibusdam
+                    nihil animi veniam, sunt optio tenetur quasi totam. Necessitatibus.
+                </p>
+            </article>
+            <form action="" id="traer">
+                <div class="datos">
+                    <div id="edades">
+                        <label>Rango de edad:</label>
+                        <select name="rango_edad" id="edad">
+                            <option value="rango1" disabled>0-5 años</option>
+                            <option value="rango2">0-2 años</option>
+                            <option value="rango3">2-5 años</option>
+                            <option value="rango4" disabled>5-17 años</option>
+                        </select>
+
+                    </div>
+
+                    <div id="sexos">
+                        <label>Sexo del niño:</label>
+                        <select name="sexo_niño" id="sexo">
+                            <option value="boy">Niño</option>
+                            <option value="girl">Niña</option>
+                        </select>
+                    </div>
+
+                    <div id="infografica">
+                        <label>Grafica deseada:</label>
+                        <select name="datos_grafica" id="datgraf">
+                            <option value="tipo1">Peso para la talla</option>
+                            <option value="tipo2">Talla para la edad</option>
+                            <option value="tipo3">Peso para la edad</option>
+                            <option value="tipo4">IMC para la edad</option>
+                            <option value="tipo5">Perímetro cefálico</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="butn">
+                    <button type="button" onclick="mostrarSection()" id="buscar">
+                        Buscar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="graficas">
+            <section class="graf" id="graf1">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica1.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf2">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica2.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf3">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica3.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf4">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica4.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf5">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica5.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf6">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica6.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf7">
+                <aside id="grafi">
+                    <img src="img/graficas/rango3 boy tipo4.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eligendi beatae tempora dolor
+                        temporibus doloremque corporis excepturi unde! Ad dolores fuga eum assumenda, nulla voluptatibus
+                        iste quasi aliquid nobis sit?</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf8">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica8.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf9">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica9.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf10">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica10.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf11">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica11.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf12">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica12.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf13">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica13.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf14">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica14.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf15">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica15.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf16">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica16.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf17">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica17.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf18">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica18.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf19">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica19.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf20">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica20.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf21">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica21.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+
+            <section class="graf" id="graf22">
+                <aside id="grafi">
+                    <img src="img/graficas/grafica22.png" alt="">
+                </aside>
+                <aside id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor impedit pariatur quaerat eius,
+                        itaque aperiam consequuntur fugit non suscipit debitis amet nulla architecto, incidunt deserunt
+                        cum praesentium labore aliquam veniam.</p>
+                </aside>
+            </section>
+        </section>
+
+        <div id="todo">
+            <button type="button" id="btodo1" onclick="mostodo()">
+                Mostrar todo</button>
+            <button type="button" id="btodo2" onclick="ocutodo()">
+                Ocultar todo</button>
+        </div>
+
+    </main>
+
+    <script>
+        function menu() {
+            const menu = document.getElementById('ico2');
+            const windowWidth = window.innerWidth;
+
+            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        window.addEventListener('resize', () => {
+            const menu = document.getElementById('ico2');
+            const windowWidth = window.innerWidth;
+
+            if (windowWidth > 1081) {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
+
+    <script>
+        function mostodo() {
+            document.getElementById('btodo2').style.display = 'initial';
+            document.getElementById('btodo1').style.display = 'none';
+            document.getElementsByClassName('graficas')[0].style.display = 'flex';
+            const sections = document.querySelectorAll('.graf');
+            sections.forEach(section => {
+                section.style.display = 'flex';
+            });
+        }
+    </script>
+
+    <script>
+        function ocutodo() {
+            document.getElementById('btodo2').style.display = 'none';
+            document.getElementById('btodo1').style.display = 'initial';
+            document.getElementsByClassName('graficas')[0].style.display = 'none';
+            const sections = document.querySelectorAll('.graf');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+        }
+    </script>
+
+    <script>
+        const select1 = document.getElementById('datgraf');
+        const select2 = document.getElementById('edad');
+
+        select1.addEventListener('change', function () {
+            const selectedValue = select1.value;
+            if (selectedValue === 'tipo2' || selectedValue === 'tipo4') {
+                select2.querySelector('option[value="rango1"]').disabled = true;
+                select2.querySelector('option[value="rango2"]').disabled = false;
+                select2.querySelector('option[value="rango3"]').disabled = false;
+                select2.querySelector('option[value="rango4"]').disabled = false;
+                if (select2.value === 'rango1' || select2.value === 'rango2' || select2.value === 'rango3' || select2.value === 'rango4') {
+                    select2.querySelector('option:not([disabled])').selected = true;
+                }
+            }
+
+            if (selectedValue === 'tipo1' || selectedValue === 'tipo3') {
+                select2.querySelector('option[value="rango1"]').disabled = true;
+                select2.querySelector('option[value="rango2"]').disabled = false;
+                select2.querySelector('option[value="rango3"]').disabled = false;
+                select2.querySelector('option[value="rango4"]').disabled = true;
+                if (select2.value === 'rango1' || select2.value === 'rango2' || select2.value === 'rango3' || select2.value === 'rango4') {
+                    select2.querySelector('option:not([disabled])').selected = true;
+                }
+            }
+
+            if (selectedValue === 'tipo5') {
+                select2.querySelector('option[value="rango1"]').disabled = false;
+                select2.querySelector('option[value="rango2"]').disabled = true;
+                select2.querySelector('option[value="rango3"]').disabled = true;
+                select2.querySelector('option[value="rango4"]').disabled = true;
+                if (select2.value === 'rango1' || select2.value === 'rango2' || select2.value === 'rango3' || select2.value === 'rango4') {
+                    select2.querySelector('option:not([disabled])').selected = true;
+                }
+            }
+        });
+    </script>
+
+    <script>
+        function mostrarSection() {
+
+            ocutodo();
+            document.getElementsByClassName('graficas')[0].style.display = 'flex';
+            let grafis = ['graf1', 'graf2', 'graf3', 'graf4', 'graf5', 'graf6', 'graf7', 'graf8', 'graf9', 'graf10', 'graf11', 'graf12', 'graf13',
+                'graf14', 'graf15', 'graf16', 'graf17', 'graf18', 'graf19', 'graf20', 'graf21', 'graf22'];
+
+            let com = ['rango2 boy tipo1', 'rango3 boy tipo1', 'rango2 boy tipo2', 'rango3 boy tipo2', 'rango1 boy tipo5', 'rango2 boy tipo4',
+                'rango3 boy tipo4', 'rango2 boy tipo3', 'rango3 boy tipo3', 'rango4 boy tipo4', 'rango4 boy tipo2', 'rango2 girl tipo1',
+                'rango3 girl tipo1', 'rango2 girl tipo2', 'rango3 girl tipo2', 'rango1 girl tipo5', 'rango2 girl tipo4', 'rango3 girl tipo4',
+                'rango2 girl tipo3', 'rango3 girl tipo3', 'rango4 girl tipo4', 'rango4 girl tipo2'];
+
+            // Obtener los valores seleccionados
+            var rangoEdad = document.getElementById("edad").value;
+            var sexo = document.getElementById("sexo").value;
+            var tipoGrafica = document.getElementById("datgraf").value;
+
+            // Formar la clave de la combinación
+            var combinacion = rangoEdad + " " + sexo + " " + tipoGrafica;
+
+            // Mostrar en consola la combinación (puedes ajustar esto según tus necesidades)
+            console.log("Combinación seleccionada: " + combinacion);
+
+            for (var i = 0; i < com.length; i++) {
+                if (combinacion === com[i]) {
+                    document.getElementById(grafis[i]).style.display = 'flex';
+                }
+                if (combinacion !== com[i]) {
+                    document.getElementById(grafis[i]).style.display = 'none';
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

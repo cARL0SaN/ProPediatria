@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPediatria - Agregar Visita</title>
+    <link rel="icon" href="img/Logomin.png">
+    <link rel="stylesheet" href="CSS/Visita.css">
+</head>
+
+<body>
+    <main class="contain">
+        <article id="tit">
+            <h1>AGREGAR VISITA</h1>
+        </article>
+        <section class="container">
+            <form action="" class="datos">
+                <div id="container2">
+                    <label for="" class="dat">Fecha de la visita</label><br>
+                    <input type="date" name="" class="data1" id="fecha" disabled>
+                </div>
+
+                <div id="container2">
+                    <div id="inside1">
+                        <label for="" class="dat">Talla/Longitud(cm)</label>
+                        <input type="number" name="" class="data1" id="talla" min="0">
+                    </div>
+                    <div id="inside1">
+                        <label for="" class="dat">Peso(kg)</label>
+                        <input type="number" name="" class="data1" id="peso" min="0">
+                    </div>
+                    <div id="inside1">
+                        <label for="" class="dat">Perímetro Cefálico(cm)</label>
+                        <input type="number" name="" class="data1" id="peri" min="0">
+                    </div>
+                </div>
+
+
+                <div id="container2">
+                    <div id="inside">
+                        <label for="" class="dat">Alergias</label>
+                        <input type="radio" name="des2" value="si" class="data2" id="radio" onclick="mosArea(this)">si
+                        <textarea name="" id="area" cols="95" rows="2"></textarea>
+                        <input type="radio" name="des2" value="no" class="data2" id="radio" onclick="mosArea(this)">no
+                    </div>
+                    <div id="inside">
+                        <label for="" class="dat">Enfermedades Recientemente</label>
+                        <input type="radio" name="des3" value="si" class="data2" id="radio" onclick="mosArea(this)">si
+                        <textarea name="" id="area" cols="95" rows="2"></textarea>
+                        <input type="radio" name="des3" value="no" class="data2" id="radio" onclick="mosArea(this)">no
+                    </div>
+                </div>
+
+                <div id="container2">
+                    <div id="inside">
+                        <label for="" class="dat">Cirugias</label>
+                        <input type="radio" name="des4" value="si" class="data2" id="radio" onclick="mosArea(this)">si
+                        <textarea name="" id="area" cols="95" rows="2"></textarea>
+                        <input type="radio" name="des4" value="no" class="data2" id="radio" onclick="mosArea(this)">no
+                    </div>
+                    <div id="inside">
+                        <label for="" class="dat">Vacunas aplicadas</label>
+                        <input type="radio" name="des1" value="si" class="data2" id="radio" onclick="mosArea(this)">si
+                        <textarea name="" id="area" cols="95" rows="2"></textarea>
+                        <input type="radio" name="des1" value="no" class="data2" id="radio" onclick="mosArea(this)">no
+                    </div>
+                </div>
+
+                <div id="container2">
+                    <div id="inside2">
+                        <label for="" class="dat">Medicamentos de control</label>
+                        <textarea name="" id="textmedi" cols="95" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <div id="container2">
+                    <input type="button" value="Crear Gráfica" id="boton" onclick="mosgrafica()">
+                    <div id="grafica">
+                    </div>
+                </div>
+
+                <div id="botones">
+                    <a href="Ventana_niño.html">
+                        <input type="button" value="Salir" id="boton">
+                    </a>
+                    <a href="Ventana_niño.html">
+                        <input type="submit" value="Guardar" id="boton">
+                    </a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function obtenerFechaActual() {
+            const fechaActual = new Date();
+            const mes = (fechaActual.getMonth() + 1).toString().padStart(2, '0');
+            const dia = fechaActual.getDate().toString().padStart(2, '0');
+            const fechaFormateada = `${fechaActual.getFullYear()}-${mes}-${dia}`;
+            return fechaFormateada;
+        }
+
+        const fechaInput = document.getElementById('fecha');
+        fechaInput.value = obtenerFechaActual();
+    </script>
+
+    <script>
+        function mosArea(radio) {
+            var area = radio.parentNode.querySelector('#area');
+            if (radio.value === 'si') {
+                area.style.display = 'initial';
+            }
+            if (radio.value === 'no') {
+                area.style.display = 'none';
+            }
+        }
+    </script>
+
+    <script>
+        function mosgrafica() {
+            document.getElementById('grafica').style.display = 'flex';
+        }
+    </script>
+</body>
+
+</html>

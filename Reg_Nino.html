@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPediatria - Registro del Menor</title>
+    <link rel="icon" href="img/Logomin.png">
+    <link rel="stylesheet" href="CSS/Registros.css">
+</head>
+
+<body background="img/pediatra.jpg">
+    <div class="contain">
+        <section class="container">
+            <article id="tit">
+                <img src="img/Logo.png" alt="" id="logo">
+                <h1>REGISTRO DEL MENOR</h1>
+            </article>
+
+            <form action="PHP & JS/registronino.php" method="post" class="campos">
+                <label for="nombre-nino">Nombre completo del niño:</label>
+                <input type="text" id="nombre-nino" name="Nombre_nino" placeholder="nombre del menor"
+                    oninput="validarTextoNumeros(event)">
+
+                <label for="apellido-nino">Apellido completo del niño:</label>
+                <input type="text" id="apellido-nino" name="Apellido_nino" placeholder="apellidos del menor"
+                    oninput="validarTexto(event)">
+
+                <label for="fecha-nacimiento-nino" id="fecha-niño">Fecha de nacimiento del niño:</label>
+                <input type="date" id="fecha_nacimiento_nino" name="fecha_nacimiento_nino">
+
+                <section id="datoss">
+                    <label for="sexo_usuario" id="sexo-niño">sexo del niño:</label>
+                    <select name="sexo_usuario" id="sexo1" required>
+                        <option value="" disabled selected value="">Sexo</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+                    <label for="gs" id="fecha-niño">Grupo Sanguineo del niño:</label>
+                    <select name="gs" id="gs1">
+                        <option value="" disabled selected value="">Grupo Sanguineo</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                    </select>
+                    <label for="rh" id="fecha-niño">RH del niño:</label>
+
+                    <select name="rh" id="rh1">
+                        <option value="" disabled selected value="">RH</option>
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                    </select>
+                </section>
+
+                <label for="nombre-responsable">Nombre completo del responsable:</label>
+                <input type="text" id="nombre_responsable" name="Nombre_responsable"
+                    placeholder="nombre del responsable" oninput="validarTextoNumeros(event)">
+
+                <label for="apellido-responsable">Apellido completo del responsable:</label>
+                <input type="text" id="apellido_responsable" name="Apellido_responsable"
+                    placeholder="apellidos del responsable" oninput="validarTexto(event)">
+
+                <label for="fecha-nacimiento-responsable" id="fecha-responsable">Fecha de nacimiento del
+                    responsable:</label>
+                <input type="date" id="fecha_nacimiento_responsable" name="fecha_nacimiento_responsable">
+
+                <label for="documento-responsable">Número documento del responsable:</label>
+                <input type="text" id="documento-responsable" name="documento_responsable"
+                    placeholder="ID del responsable" oninput="validarNumeros(event)" maxlength="15">
+
+                <label for="registro-civil-nino">Registro civil del niño:</label>
+                <input type="text" id="registro-civil-nino" name="registro_civil_nino" placeholder="ID del menor"
+                    oninput="validarNumeros(event)" maxlength="15">
+                <div id="botones">
+                    <a href="Index.html">
+                        <input type="button" value="Salir" id="boton">
+                    </a>
+                    <a href="#">
+                        <input type="submit" value="Registrarse" id="boton">
+                    </a>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        // Obtener la fecha actual
+        const fechaActual = new Date();
+        const fechaActual1 = new Date();
+
+        // Restar 14 años a la fecha actual
+        fechaActual.setFullYear(fechaActual.getFullYear() - 14);
+        fechaActual1.setFullYear(fechaActual1.getFullYear());
+
+        // Formatear la fecha como YYYY-MM-DD (formato requerido por el input date)
+        const fechaMinima = fechaActual.toISOString().split('T')[0];
+        const fechaMaxima = fechaActual1.toISOString().split('T')[0];
+
+        // Establecer la fecha mínima en el input date
+        document.getElementById('fecha_nacimiento_nino').setAttribute('min', fechaMinima);
+        document.getElementById('fecha_nacimiento_nino').setAttribute('max', fechaMaxima);
+        document.getElementById('fecha_nacimiento_responsable').setAttribute('max', fechaMaxima);
+    </script>
+
+    <script>
+        function validarTexto(event) {
+            const input = event.target;
+            const texto = input.value;
+            const valido = /^[a-zA-Z\s]*$/.test(texto);
+
+            if (!valido) {
+                input.value = texto.slice(0, -1); // Eliminar el último caracter no válido
+                document.getElementById('mensajeError').textContent = 'Solo se permiten letras y espacios.';
+            } else {
+                document.getElementById('mensajeError').textContent = '';
+            }
+        }
+    </script>
+
+    <script>
+        function validarNumeros(event) {
+            const input = event.target;
+            const numeros = /^[0-9]*$/;
+            const valido = numeros.test(input.value);
+
+            if (!valido) {
+                input.value = input.value.replace(/\D/g, ''); // Eliminar caracteres no numéricos
+                document.getElementById('mensajeErrorNumeros').textContent = 'Solo se permiten números.';
+            } else {
+                document.getElementById('mensajeErrorNumeros').textContent = '';
+            }
+        }
+    </script>
+
+    <script>
+        function validarTextoNumeros(event) {
+            const input = event.target;
+            const textoNumeros = /^[a-zA-Z0-9\s]*$/;
+            const valido = textoNumeros.test(input.value);
+
+            if (!valido) {
+                input.value = input.value.replace(/[^a-zA-Z0-9\s]/g, ''); // Eliminar caracteres especiales
+                document.getElementById('mensajeErrorTextoNumeros').textContent = 'Solo se permiten letras y números.';
+            } else {
+                document.getElementById('mensajeErrorTextoNumeros').textContent = '';
+            }
+        }
+    </script>
+</body>
+
+</html>
